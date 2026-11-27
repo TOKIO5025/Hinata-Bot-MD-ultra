@@ -8,7 +8,51 @@
     <title>Hinata AI 🌸</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main class="app">
+        <header>
+          <div class="brand">
+            <div class="brand-icon">🌸</div>
+            <div>
+              <h1>Hinata AI</h1>
+              <p class="subtitle">Tu compañera virtual amable</p>
+            </div>
+          </div>
+          <div class="header-right">
+            <span id="status" class="status offline">Conectando con la IA…</span>
+            <button id="voice-toggle" class="soft-button" type="button">🔊 Voz activada</button>
+            <button id="clear" class="soft-button" type="button">Limpiar chat</button>
+          </div>
+        </header>
+
+        <section class="layout">
+          <aside class="side">
+            <div class="hinata-art">🌸</div>
+            <h2>¡Hola! Soy Hinata</h2>
+            <p>Estoy aquí para conversar contigo, ayudarte con tus dudas y compartir un ratito agradable.</p>
+            <div class="local-note">✨ Modo de IA local<br />La conversación usa el modelo configurado en el servidor.</div>
+          </aside>
+
+          <section class="chat-panel" aria-label="Conversación con Hinata">
+            <div class="chat-top">
+              <strong>💗 Nuestra conversación</strong>
+              <span>Un espacio tranquilo para charlar</span>
+            </div>
+            <div id="chat" class="chat" aria-live="polite"></div>
+            <div id="suggestions" class="suggestions">
+              <button type="button" data-message="¡Hola Hinata! ¿Cómo estás?">🌷 Saludar</button>
+              <button type="button" data-message="Cuéntame algo bonito">✨ Algo bonito</button>
+              <button type="button" data-message="Ayúdame con una tarea">📚 Ayúdame con mi tarea</button>
+            </div>
+            <form id="chat-form" class="composer">
+              <input id="message" type="text" placeholder="Escribe un mensaje para Hinata…" autocomplete="off" aria-label="Escribe tu mensaje" />
+              <button id="send" type="submit">Enviar</button>
+            </form>
+          </section>
+        </section>
+        <footer>Hecho con cariño 🌸 Hinata AI</footer>
+      </main>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
