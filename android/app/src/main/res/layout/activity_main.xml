@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFF8FB" android:orientation="vertical" android:padding="16dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="🌸 Hinata AI" android:textColor="#754A65" android:textSize="26sp" android:textStyle="bold" />
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingTop="5dp" android:paddingBottom="10dp"
+        android:text="Primero importa un modelo local (.litertlm)" android:textColor="#98788D" android:textSize="13sp" />
+    <Button android:id="@+id/importModel" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="📦 Importar modelo de IA" />
+    <ScrollView android:id="@+id/chatScroll" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true"
+        android:paddingTop="12dp" android:paddingBottom="12dp">
+        <TextView android:id="@+id/chat" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hinata: ¡Holiii! 🌸 Importa un modelo compatible para comenzar a conversar sin conexión."
+            android:textColor="#513E4B" android:textSize="16sp" android:lineSpacingExtra="6dp" />
+    </ScrollView>
+    <Switch android:id="@+id/voiceSwitch" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:checked="true"
+        android:text="🔊 Leer respuestas en voz alta" android:textColor="#805D73" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal">
+        <EditText android:id="@+id/messageInput" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="Escribe a Hinata…" android:imeOptions="actionSend"
+            android:inputType="textCapSentences|textMultiLine" android:maxLines="3" android:padding="12dp" />
+        <Button android:id="@+id/send" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Enviar" />
+    </LinearLayout>
+</LinearLayout>
